@@ -1,0 +1,17 @@
+<h2>Liste des Articles</h2>
+<table class="table" border="2">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Suppression</th>
+    <th>Modification</th>
+  </tr>
+  <tr *ngFor="let artile of articles">
+    <td>{{artile.id}}</td>
+    <td>{{artile.name}}</td>
+    <td>{{artile.description}}</td>
+    <td><button (click)="deleteArticle(artile.id)" class="btn btn-danger">Supprimer</button></td>
+    <td><button (click)="updateArticle(artile.id)" class="btn btn-warning">Modifier</button></td>
+  </tr>
+</table>
